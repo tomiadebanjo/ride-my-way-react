@@ -6,10 +6,10 @@
   "author": "Tomi Adebanjo <tomiadebanjo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "",
+    "start": "node --require @babel/register src/server/index.js --open",
     "dev-server": "webpack-dev-server --no-cache --open",
-    "test": "",
-    "build": ""
+    "postinstall": "webpack --mode production",
+    "test": ""
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
@@ -17,6 +17,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
