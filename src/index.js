@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
-const Boy = () => (
-  <div>
-    boy
-  </div>
-)
-
-ReactDOM.render(<Boy />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
