@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from './style.scss'
 
 const Footer = () => (
-	<div>
-		<h1>Footer</h1>
-	</div>
+	<footer>
+		<p>Ride My Way | Copyright © 2018</p>
+	</footer>
 );
 
 export default Footer;

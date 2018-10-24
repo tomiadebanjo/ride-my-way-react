@@ -1,0 +1,11 @@
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+}
