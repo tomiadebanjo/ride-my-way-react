@@ -1,0 +1,13 @@
+.hero {
+	align-items: center;
+	color: white;
+	display: flex;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+	url('../../assets/images/main-hero.jpg');
+	background-size: cover;
+	background-position: center;
+	flex-direction: column;
+	min-height: 400px;
+	justify-content: center;
+	flex: 2;
+}

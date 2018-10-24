@@ -1,0 +1,29 @@
+@import '../../assets/styles/settings';
+
+.header {
+  align-items: center;
+  background-color: white;
+  border-bottom: $site-accent 1px solid;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  color: $site-accent;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $site-accent;
+    text-decoration: none;
+  }
+
+  .brand {
+    font-size: 25px;
+  }
+
+  nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 0 20px;
+    }
+  }
+}
