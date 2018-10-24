@@ -1,5 +1,6 @@
 .DS_STORE
 dist
+.vscode
 
 # Logs
 logs
