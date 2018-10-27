@@ -4,7 +4,6 @@ import InfoData from './InfoData';
 import classes from './style.scss'
 
 const InfoSection = () => {
-	console.log(InfoData);
 	const mappedInfoSection = InfoData.map((item) => {
 		const { id, text, img } = item
 		return (

@@ -1,0 +1,53 @@
+@import '../../assets/styles/settings';
+
+.signupForm {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+  }
+  .container {
+    background-color: white;
+    min-width: 35%;
+    padding: 2%;
+  }
+
+  button {
+    background: $site-accent;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    height: 44px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .form_control {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    input {
+      font-size: 14px;
+      font-weight: 300;
+      padding: 11px;
+      color: #000;
+      background-color: #fafafa;
+      border-radius: 2px;
+      margin-bottom: 7px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #dcdcdc;
+    }
+  }
+};

@@ -5,13 +5,15 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 const App = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={LandingPage} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
-    </Switch>
-  </BrowserRouter>
+  <React.Fragment>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+      </Switch>
+    </BrowserRouter>
+  </React.Fragment>
 )
 
 export default App;
