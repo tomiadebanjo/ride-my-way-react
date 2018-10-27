@@ -1,20 +1,40 @@
 import React from 'react';
-import classes from  './style.scss';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import classes from './style.scss';
+import { userLogout } from '../../util/helpers/userLogout';
 
-const Header = () => (
-  <header className={classes.header}>
-    <a href="/" className={classes.brand}>Ride My Way</a>
-    <nav>
-      <ul className={classes.menu}>
-        <li>
-          <a href="">Login</a>
-        </li>
-        <li>
-          <a href="">Sign-Up</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+const Header = props => (
+	<header className={classes.header}>
+		<a href="/" className={classes.brand}>
+			Ride My Way
+		</a>
+		<nav>
+			{!props.isAuthenticated ? (
+				<ul className={classes.menu}>
+					<li>
+						<Link to="/login">Login</Link>
+					</li>
+					<li>
+						<Link to="/signup">Sign-Up</Link>
+					</li>
+				</ul>
+			) : (
+				<ul className={classes.menu}>
+					<li>
+						<Link to="/">Profile</Link>
+					</li>
+					<li>
+						<Link to="/" onClick={userLogout}>Logout</Link>
+					</li>
+				</ul>
+			)}
+		</nav>
+	</header>
 );
 
-export default Header;
+const mapStateToProps = state => ({
+	isAuthenticated: state.authentication.isAuthenticated
+});
+
+export default connect(mapStateToProps)(Header);

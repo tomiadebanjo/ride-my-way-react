@@ -1,1 +1,4 @@
-export const userLogout = () => localStorage.removeItem('user');
+export const userLogout = (history) => {
+  localStorage.removeItem('user')
+  history.push('/');
+};

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import constants from '../constants';
+import setAxiosHeader from '../../util/helpers/setAxiosHeader';
+import { storeData } from '../../util/helpers/localStorage';
 
 const { REGISTER_REQUEST, REGISTER_SUCCESS, REGISTER_FAIL } = constants;
 
@@ -21,13 +23,13 @@ export const registerFail = error => ({
 
 export const register = (user, history) => (dispatch) => {
   dispatch(registerRequest(user))
-  const { firstName, lastName , email, password } = user
-  const userData = { fullName: `${firstName} ${lastName}`, email, password };
-  return axios.post(`/auth/signup`, userData)
+  return axios.post(`/auth/signup`, user)
     .then(response => {
+      const { data } = response;
       console.log(response);
       dispatch(registerSuccess('user'))
-      localStorage.setItem('user', 'boy')
+      storeData(data);
+      setAxiosHeader(data.token);
       history.push('/');
     })
     .catch(err => {

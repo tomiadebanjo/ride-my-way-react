@@ -7,7 +7,6 @@ import App from './App';
 import 'normalize.css/normalize.css';
 import './assets/styles/base.scss';
 
-
 const BASE_URL = 'https://ride-my-way-zaz.herokuapp.com/api/v1/';
 axios.defaults.baseURL = BASE_URL;
 
