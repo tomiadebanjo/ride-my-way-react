@@ -7,4 +7,5 @@ export const storeData = (data) => {
 
 export const getData = (key) => {
   const data = JSON.parse(localStorage.getItem(key))
+  return data;
 }
