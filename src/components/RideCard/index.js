@@ -11,13 +11,13 @@ const RideCard = (props) => {
 
   return <div className={classes.card}>
 			<div className={classes.location_row}>
-				<div className={classes.location_text_left}>
+				<div className={classes.location_text}>
 					<p>{pickup_location}</p>
 				</div>
         <div className={classes.img_size}>
 				  <img src={arrow} alt="arrow" className={classes.img}/>
         </div>
-        <div className={classes.location_text_right}>
+        <div className={classes.location_text}>
           <p>{destination}</p>
         </div>
 			</div>
