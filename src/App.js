@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import RidesView from './pages/RidesView';
+import Dashboard from './pages/Dashboard';
 
 const App = () => (
   <React.Fragment>
@@ -13,6 +14,7 @@ const App = () => (
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/rides" component={RidesView} />
+        <Route path="/dashboard" component={Dashboard} />
       </Switch>
     </BrowserRouter>
   </React.Fragment>
