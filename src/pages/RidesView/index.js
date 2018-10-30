@@ -47,9 +47,9 @@ class RidesView extends React.Component {
 };
 
 const mapStateToProps = state => ({
-  loading: state.ride.loading,
-  rides: state.ride.rides
-})
+	loading: state.ride.fetchRides.loading,
+	rides: state.ride.fetchRides.rides
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchRideNow: () => dispatch(fetchRide())

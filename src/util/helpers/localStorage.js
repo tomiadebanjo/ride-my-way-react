@@ -1,6 +1,6 @@
 export const storeData = (data) => {
-  const { fullName, token, userId } = data
-  const user = { fullName, token, userId }
+  const { fullName, token, userId, email } = data
+  const user = { fullName, token, userId, email }
 
   localStorage.setItem('user', JSON.stringify(user));
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import arrow from '../../assets/images/arrow.png'
 import classes from './style.scss';
 
-const RideCard = (props) => { 
+const RideCard = (props) => {
   const { id, destination, pickup_location, departure_date, departure_time } = props
   const formatTime = time => time.slice(0, 5);
   const formatDate = date => new Date(date)

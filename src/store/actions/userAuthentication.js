@@ -35,10 +35,12 @@ export const login = (email, password, history) => (dispatch) => {
     storeData(data);
     setAxiosHeader(data.token);
     history.push('/');
+    toastr.success(data.message);
   })
-  .catch(err => {
-    console.log(err)
-    dispatch(loginFail(err));
+  .catch(error => {
+    console.log(error.response.data)
+    dispatch(loginFail(error));
+    toastr.error(error.response.data.message);
   })
 }
 
