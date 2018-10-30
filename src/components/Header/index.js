@@ -22,7 +22,7 @@ const Header = props => (
 			) : (
 				<ul className={classes.menu}>
 					<li>
-						<Link to="/">Profile</Link>
+						<Link to="/dashboard">Dashboard</Link>
 					</li>
 					<li>
 						<Link to="/" onClick={userLogout}>Logout</Link>
