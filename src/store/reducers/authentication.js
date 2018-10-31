@@ -22,7 +22,8 @@ const authentication = (state = initialState, action) => {
 		case REGISTER_SUCCESS:
 			return {
 				...state,
-				isAuthenticated: true
+				isAuthenticated: true,
+				user: action.user
 			}
 		case REGISTER_FAIL:
 			return {}

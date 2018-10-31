@@ -2,7 +2,6 @@ import React from 'react';
 import placeholder from '../../assets/images/placeholder.png';
 import CreateRideModal from '../CreateRideModal';
 import { getData } from '../../util/helpers/localStorage';
-import Modal from '../Modal';
 import classes from './style.scss';
 
 class Profile extends React.Component {
