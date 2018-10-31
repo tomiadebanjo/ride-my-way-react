@@ -16,10 +16,12 @@ const authentication = (state = initialState, action) => {
 	switch (action.type) {
 		case REGISTER_REQUEST:
 			return {
+				...state,
 				registering: true
 			};
 		case REGISTER_SUCCESS:
 			return {
+				...state,
 				isAuthenticated: true
 			}
 		case REGISTER_FAIL:

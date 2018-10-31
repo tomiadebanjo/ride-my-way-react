@@ -29,9 +29,8 @@ class Profile extends React.Component {
 	};
 
 	render() {
-		const data = getData('user');
-		const { fullName, email } = data;
-		console.log(fullName, email);
+		const data = getData('user')
+		const { fullName, email } = data
 		const location = 'Lagos, Nigeria';
 		return (
 			<div className={classes.container}>
@@ -67,9 +66,7 @@ class Profile extends React.Component {
 						<a href="/rides">View available rides</a>
 					</div>
 					<div className={classes.button}>
-						<a href="" disabled>
-							View ride requests
-						</a>
+						<a disabled>View ride requests</a>
 					</div>
 				</div>
 
