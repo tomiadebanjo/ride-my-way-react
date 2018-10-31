@@ -10,30 +10,31 @@ class Profile extends React.Component {
 		modal: {
 			show: false
 		}
-	}
+	};
 
 	showModal = () => {
 		this.setState({
-			modal:{
+			modal: {
 				show: true
 			}
-		})
-	}
+		});
+	};
 
 	hideModal = () => {
 		this.setState({
-			modal:{
+			modal: {
 				show: false
 			}
-		})
-	}
+		});
+	};
 
 	render() {
-		const data = getData('user')
-		const { fullName, email } = data
+		const data = getData('user');
+		const { fullName, email } = data;
 		console.log(fullName, email);
 		const location = 'Lagos, Nigeria';
-		return ( <div className={classes.container}>
+		return (
+			<div className={classes.container}>
 				<CreateRideModal
 					show={this.state.modal.show}
 					handleClose={this.hideModal}
@@ -63,16 +64,18 @@ class Profile extends React.Component {
 					<div className={classes.button}>
 						<a onClick={this.showModal}>Create a ride</a>
 					</div>
-				<div className={classes.button}>
-						<a href="/">View available rides</a>
+					<div className={classes.button}>
+						<a href="/rides">View available rides</a>
 					</div>
-				<div className={classes.button}>
-						<a href="/">View ride requests</a>
+					<div className={classes.button}>
+						<a href="" disabled>
+							View ride requests
+						</a>
 					</div>
 				</div>
 
 				<div className={classes.history}>
-				<h3 className={classes.margin_O}>Ride History</h3>
+					<h3 className={classes.margin_O}>Ride History</h3>
 					<div className={classes.table_container}>
 						<table className={classes.table}>
 							<tbody>
@@ -86,8 +89,9 @@ class Profile extends React.Component {
 						</table>
 					</div>
 				</div>
-		</div>);
+			</div>
+		);
 	}
-};
+}
 
 export default Profile;
