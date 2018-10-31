@@ -66,8 +66,10 @@ class Profile extends React.Component {
 				<div className={classes.button}>
 						<a href="/rides">View available rides</a>
 					</div>
-				<div className={classes.button}>
-						<a href="" disabled>View ride requests</a>
+					<div className={classes.button}>
+						<a href="" disabled>
+							View ride requests
+						</a>
 					</div>
 				</div>
 
@@ -86,7 +88,6 @@ class Profile extends React.Component {
 						</table>
 					</div>
 				</div>
-
 			</div>
 		);
 	}
