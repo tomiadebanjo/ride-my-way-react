@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard test should render the landing page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Dashboard
+        fullName="Tom"
+      >
+        <div
+          className="container"
+        >
+          <Connect(Header)>
+            <Header
+              dispatch={[Function]}
+              isAuthenticated={false}
+            >
+              <header
+                className="header"
+              >
+                <a
+                  className="brand"
+                  href="/"
+                >
+                  Ride My Way
+                </a>
+                <nav>
+                  <ul
+                    className="menu"
+                  >
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/login"
+                      >
+                        <a
+                          href="/login"
+                          onClick={[Function]}
+                        >
+                          Login
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/signup"
+                      >
+                        <a
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          Sign-Up
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+            </Header>
+          </Connect(Header)>
+          <Profile>
+            <div
+              className="container"
+            >
+              <Connect(createRideModal)
+                handleClose={[Function]}
+                show={false}
+              >
+                <createRideModal
+                  createRideNow={[Function]}
+                  handleClose={[Function]}
+                  loading={false}
+                  show={false}
+                >
+                  <Modal
+                    handleClose={[Function]}
+                    show={false}
+                  >
+                    <div
+                      className="modal  display_none"
+                    >
+                      <section
+                        className="modal_main"
+                      >
+                        <span
+                          className="close"
+                          id="ride-close"
+                          onClick={[Function]}
+                        >
+                          ×
+                        </span>
+                        <div
+                          className="create_ride_modal"
+                        >
+                          <h2>
+                            Create Ride
+                          </h2>
+                          <form
+                            onSubmit={[Function]}
+                          >
+                            <div
+                              className="form_control"
+                            >
+                              <label
+                                htmlFor="pickUpLocation"
+                              >
+                                Take-off location
+                              </label>
+                              <input
+                                id="pickUpLocation"
+                                name="pickUpLocation"
+                                onChange={[Function]}
+                                placeholder="take-off location"
+                                required={true}
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              className="form_control"
+                            >
+                              <label
+                                htmlFor="destination"
+                              >
+                                Destination
+                              </label>
+                              <input
+                                id="destination"
+                                name="destination"
+                                onChange={[Function]}
+                                placeholder="destination"
+                                required={true}
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              className="form_control"
+                            >
+                              <label
+                                htmlFor="departureDate"
+                              >
+                                Date
+                              </label>
+                              <input
+                                id="departureDate"
+                                name="departureDate"
+                                onChange={[Function]}
+                                required={true}
+                                type="date"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              className="form_control"
+                            >
+                              <label
+                                htmlFor="departureTime"
+                              >
+                                Time
+                              </label>
+                              <input
+                                id="departureTime"
+                                name="departureTime"
+                                onChange={[Function]}
+                                required={true}
+                                type="time"
+                                value=""
+                              />
+                            </div>
+                            <button>
+                              Submit
+                            </button>
+                          </form>
+                        </div>
+                      </section>
+                    </div>
+                  </Modal>
+                </createRideModal>
+              </Connect(createRideModal)>
+              <div
+                className="row"
+              >
+                <div
+                  className="img_row"
+                >
+                  <img
+                    alt="placeholder"
+                    src="test-file-stub"
+                  />
+                </div>
+                <div
+                  className="user_info"
+                >
+                  <p>
+                    Name: 
+                    Tom
+                  </p>
+                  <p>
+                    Email: 
+                    email
+                  </p>
+                  <p>
+                    Location: 
+                    Lagos, Nigeria
+                  </p>
+                </div>
+                <div
+                  className="ride_count"
+                >
+                  <div
+                    className="count_row"
+                  >
+                    <p
+                      className="margin_O"
+                    >
+                      Rides taken
+                    </p>
+                    <span
+                      className="count  margin_O"
+                    >
+                      0
+                    </span>
+                  </div>
+                  <div
+                    className="count_row"
+                  >
+                    <p
+                      className="margin_O"
+                    >
+                      Rides given
+                    </p>
+                    <span
+                      className="count  margin_O"
+                    >
+                      0
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="button_row"
+              >
+                <div
+                  className="button"
+                >
+                  <a
+                    onClick={[Function]}
+                  >
+                    Create a ride
+                  </a>
+                </div>
+                <div
+                  className="button"
+                >
+                  <a
+                    href="/rides"
+                  >
+                    View available rides
+                  </a>
+                </div>
+                <div
+                  className="button"
+                >
+                  <a
+                    disabled={true}
+                  >
+                    View ride requests
+                  </a>
+                </div>
+              </div>
+              <div
+                className="history"
+              >
+                <h3
+                  className="margin_O"
+                >
+                  Ride History
+                </h3>
+                <div
+                  className="table_container"
+                >
+                  <table
+                    className="table"
+                  >
+                    <tbody>
+                      <tr>
+                        <th>
+                          Take-off location
+                        </th>
+                        <th>
+                          Destination
+                        </th>
+                        <th>
+                          Departure time
+                        </th>
+                        <th>
+                          Departure date
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </Profile>
+          <Footer>
+            <footer>
+              <p>
+                Ride My Way | Copyright © 2018
+              </p>
+            </footer>
+          </Footer>
+        </div>
+      </Dashboard>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

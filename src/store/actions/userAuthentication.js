@@ -23,13 +23,14 @@ export const loginFail = (error) => ({
 
 export const login = (email, password, history) => (dispatch) => {
   dispatch(loginRequest({ email }))
-  return axios.post(`/auth/login`, {
+  return axios.post('/auth/login', {
     email,
     password
   })
   .then(response => {
     const { data } = response;
-    dispatch(loginSuccess('user'))
+    console.log(data)
+    dispatch(loginSuccess(data))
     storeData(data);
     setAxiosHeader(data.token);
     history.push('/');
