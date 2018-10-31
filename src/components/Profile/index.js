@@ -59,7 +59,6 @@ class Profile extends React.Component {
 						</div>
 					</div>
 				</div>
-
 				<div className={classes.button_row}>
 					<div className={classes.button}>
 						<a onClick={this.showModal}>Create a ride</a>
@@ -87,6 +86,7 @@ class Profile extends React.Component {
 						</table>
 					</div>
 				</div>
+
 			</div>
 		);
 	}
