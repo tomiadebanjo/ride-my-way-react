@@ -33,7 +33,8 @@ export const register = (user, history) => (dispatch) => {
       toastr.success(data.message);
     })
     .catch(error => {
-      dispatch(registerFail(error));
+      console.log(error.response.data);
+      dispatch(registerFail(error.response.data));
       toastr.error(error.response.data.message);
     })
 }

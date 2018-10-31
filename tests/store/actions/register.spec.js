@@ -10,15 +10,25 @@ const url = '/auth/signup';
 const initialState = {}
 
 const mockData = {
-  data: {
-    user: {
-      email: "tomiadebanjo@gmail.com",
-      fullName: "Adebanjo",
-      token: "token",
-      userId: 1
-    }
-  }
-}
+	data: {
+		user: {
+			email: 'tomiadebanjo@gmail.com',
+			fullName: 'Adebanjo',
+			token: 'token',
+			userId: 1
+		}
+	},
+	error: {
+		response: {
+			data: {
+				error: 'Request failed with status code 404'
+      },
+      message: {
+        error: 'Request failed with status code 404'
+      }
+		}
+	}
+};
 
 const history = {
   push: jest.fn()
@@ -38,6 +48,29 @@ describe('register user', () => {
       },
       { type: 'REGISTER_SUCCESS',
         user
+      },
+    ];
+
+    const store = mockStore(initialState);
+    store.dispatch(actions.register(user, history))
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+        done();
+      })
+  })
+
+  it('should dispatch REGISTER_FAIL after succesfully creating account', (done) => {
+    moxios.stubRequest(url, { status: 404, response: mockData.error });
+
+    const { data: { user } } = mockData;
+    const { error } = mockData;
+    const expectedActions = [
+      { type: 'REGISTER_REQUEST',
+        user
+      },
+      {
+        type: 'REGISTER_FAIL',
+        error
       },
     ];
 

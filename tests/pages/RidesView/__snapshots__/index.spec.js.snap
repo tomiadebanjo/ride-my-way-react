@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ride view page test should render the ride view page  correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(RidesView)>
+        <RidesView
+          fetchRideNow={[Function]}
+          getSingleRide={[Function]}
+          loading={false}
+          rides={
+            Array [
+              Object {
+                "departure_date": "date",
+                "departure_time": "time",
+                "destination": "destination",
+                "id": 1,
+                "pickup_location": "location",
+              },
+            ]
+          }
+        >
+          <div
+            className="ride_container"
+          >
+            <Connect(Header)>
+              <Header
+                dispatch={[Function]}
+                isAuthenticated={false}
+              >
+                <header
+                  className="header"
+                >
+                  <a
+                    className="brand"
+                    href="/"
+                  >
+                    Ride My Way
+                  </a>
+                  <nav>
+                    <ul
+                      className="menu"
+                    >
+                      <li>
+                        <Link
+                          replace={false}
+                          to="/login"
+                        >
+                          <a
+                            href="/login"
+                            onClick={[Function]}
+                          >
+                            Login
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          replace={false}
+                          to="/signup"
+                        >
+                          <a
+                            href="/signup"
+                            onClick={[Function]}
+                          >
+                            Sign-Up
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </header>
+              </Header>
+            </Connect(Header)>
+            <SingleRideModal
+              handleClose={[Function]}
+              show={false}
+            >
+              <Modal
+                handleClose={[Function]}
+                show={false}
+              >
+                <div
+                  className="modal  display_none"
+                >
+                  <section
+                    className="modal_main"
+                  >
+                    <span
+                      className="close"
+                      id="ride-close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="single_ride_modal"
+                    >
+                      <h2>
+                        Ride Details
+                      </h2>
+                      <div
+                        className="loader"
+                      />
+                    </div>
+                  </section>
+                </div>
+              </Modal>
+            </SingleRideModal>
+            <h2
+              className="heading"
+            >
+              Available rides
+            </h2>
+            <div
+              className="main_container"
+            >
+              <RideCard
+                departure_date="date"
+                departure_time="time"
+                destination="destination"
+                key="1"
+                pickup_location="location"
+                show={[Function]}
+              >
+                <div
+                  className="card"
+                >
+                  <div
+                    className="location_row"
+                  >
+                    <div
+                      className="location_text"
+                    >
+                      <p>
+                        location
+                      </p>
+                    </div>
+                    <div
+                      className="img_size"
+                    >
+                      <img
+                        alt="arrow"
+                        className="img"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="location_text"
+                    >
+                      <p>
+                        destination
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="time"
+                  >
+                    <p>
+                      time
+                       / 
+                      Invalid Date
+                    </p>
+                  </div>
+                  <div
+                    className="button"
+                  >
+                    <a
+                      onClick={[Function]}
+                    >
+                      More Info
+                    </a>
+                  </div>
+                </div>
+              </RideCard>
+            </div>
+            <Footer>
+              <footer>
+                <p>
+                  Ride My Way | Copyright © 2018
+                </p>
+              </footer>
+            </Footer>
+          </div>
+        </RidesView>
+      </Connect(RidesView)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
