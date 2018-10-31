@@ -30,7 +30,6 @@ class createRideModal extends React.Component {
 		e.preventDefault();
 		const { ride } = this.state;
 		const rideData = { ...ride, departureDate: formatDate(ride.departureDate) };
-		console.log(rideData);
 		this.props.createRideNow(rideData);
 	};
 

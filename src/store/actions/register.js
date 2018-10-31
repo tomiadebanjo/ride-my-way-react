@@ -26,7 +26,6 @@ export const register = (user, history) => (dispatch) => {
   return axios.post(`/auth/signup`, user)
     .then(response => {
       const { data } = response;
-      console.log(response);
       dispatch(registerSuccess('user'))
       storeData(data);
       setAxiosHeader(data.token);

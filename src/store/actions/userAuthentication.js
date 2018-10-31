@@ -23,14 +23,12 @@ export const loginFail = (error) => ({
 
 export const login = (email, password, history) => (dispatch) => {
   dispatch(loginRequest({ email }))
-  console.log(email, password);
   return axios.post(`/auth/login`, {
     email,
     password
   })
   .then(response => {
     const { data } = response;
-    console.log(response);
     dispatch(loginSuccess('user'))
     storeData(data);
     setAxiosHeader(data.token);
@@ -38,7 +36,6 @@ export const login = (email, password, history) => (dispatch) => {
     toastr.success(data.message);
   })
   .catch(error => {
-    console.log(error.response.data)
     dispatch(loginFail(error));
     toastr.error(error.response.data.message);
   })

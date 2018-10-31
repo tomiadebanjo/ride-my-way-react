@@ -7,7 +7,7 @@ const RideCard = (props) => {
   const formatTime = time => time.slice(0, 5);
   const formatDate = date => new Date(date)
 			.toLocaleDateString()
-			.replace(/[/]/g, '-');
+      .replace(/[/]/g, '-');
 
   return <div className={classes.card}>
 			<div className={classes.location_row}>
@@ -27,7 +27,7 @@ const RideCard = (props) => {
         </p>
       </div>
 			<div className={classes.button}>
-				<a href="">More Info</a>
+				<a onClick={props.show}>More Info</a>
 			</div>
 		</div>;
 }

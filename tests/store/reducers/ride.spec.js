@@ -1,15 +1,16 @@
 import ride from '../../../src/store/reducers/ride'
 
 const initialState = {
-  fetchRides: {
-    rides: [],
-    loading: false,
-    error: ''
-  },
-  createRide: {
-    loading: false,
-    error: ''
-  }
+	fetchRides: {
+		rides: [],
+		loading: false,
+		error: ''
+	},
+	createRide: {
+		loading: false,
+		error: ''
+	},
+	singleRide: {}
 };
 
 describe('ride reducer test', () => {
