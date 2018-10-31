@@ -31,9 +31,10 @@ export const register = (user, history) => (dispatch) => {
       storeData(data);
       setAxiosHeader(data.token);
       history.push('/');
+      toastr.success(data.message);
     })
-    .catch(err => {
-      console.log(err)
-      dispatch(registerFail(err));
+    .catch(error => {
+      dispatch(registerFail(error));
+      toastr.error(error.response.data.message);
     })
 }

@@ -9,6 +9,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  externals: {
+    'jquery': 'jQuery'
+  },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -75,6 +78,6 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ]
 }

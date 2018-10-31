@@ -31,8 +31,6 @@ class SignupForm extends React.Component {
   confirmPassword = (e) => {
     const { user: { password, confirmPassword } } = this.state;
     if(password !== confirmPassword){
-      console.log(password)
-      console.log(confirmPassword)
       return e.target.setCustomValidity("Passwords Don't Match");
     }
     e.target.setCustomValidity("");
@@ -91,7 +89,7 @@ class SignupForm extends React.Component {
               />
             </div>
           <div className={classes.form_control}>
-            <label htmlFor="confirmPassword">Password</label>
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <input
               type="password"
               name="confirmPassword"

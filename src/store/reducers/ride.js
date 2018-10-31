@@ -2,33 +2,72 @@ import constants from '../constants';
 const {
   FETCH_RIDE_REQUEST,
   FETCH_RIDE_SUCCESS,
-  FETCH_RIDE_FAIL
+	FETCH_RIDE_FAIL,
+	CREATE_RIDE_REQUEST,
+	CREATE_RIDE_SUCCESS,
+	CREATE_RIDE_FAIL
 } = constants;
 
 const initialState = {
-	rides: [],
-	loading: false,
+	fetchRides: {
+		rides: [],
+		loading: false,
+		error: ''
+	},
+	createRide: {
+		loading: false,
+		error: ''
+	}
 };
 
 const rides = (state = initialState, action) => {
 	switch (action.type) {
 		case FETCH_RIDE_REQUEST:
 			return {
-				...state,
-				loading: true
+				fetchRides: {
+					...state.fetchRides,
+					loading: true
+				}
 			};
     case FETCH_RIDE_SUCCESS:
 			return {
-				...state,
-				rides: action.rides,
-				loading: false
+				fetchRides: {
+					...state.fetchRides,
+					rides: action.rides,
+					loading: false
+				}
 			};
 		case FETCH_RIDE_FAIL:
 			return {
-				...state,
-				loading: false,
-				error: action.error,
-				articles: []
+				fetchRides: {
+					...state.createRides,
+					loading: false,
+					error: action.error,
+					rides: []
+				}
+			};
+		case CREATE_RIDE_REQUEST:
+			return {
+				createRide: {
+					...state.createRide,
+					loading: true
+				}
+			};
+    case CREATE_RIDE_SUCCESS:
+			return {
+				createRide: {
+					...state.createRide,
+					rides: action.rides,
+					loading: false
+				}
+			};
+		case CREATE_RIDE_FAIL:
+			return {
+				createRide: {
+					...state.createRide,
+					loading: false,
+					error: action.error,
+				}
 			};
 		default:
 			return state;

@@ -5,7 +5,7 @@ import axios from 'axios';
 import store from './store';
 import App from './App';
 import { getData } from './util/helpers/localStorage';
-import setAxiosHeader from './util/helpers/setAxiosHeader'
+import setAxiosHeader from './util/helpers/setAxiosHeader';
 import 'normalize.css/normalize.css';
 import './assets/styles/base.scss';
 
