@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`dashboard test should render the landing page correctly 1`] = `
+exports[`dashboard test should render the dashboard page correctly 1`] = `
 <Provider
   store={
     Object {

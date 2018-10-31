@@ -30,13 +30,12 @@ const authentication = (state = initialState, action) => {
 		case LOGIN_REQUEST:
 			return {
 				...state,
-				isAuthenticated: true,
         user: action.user
       }
 		case LOGIN_SUCCESS:
 			return {
 				...state,
-        loggedIn: true,
+				isAuthenticated: true,
         user: action.user
       }
 		case LOGIN_FAIL:
