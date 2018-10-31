@@ -1,7 +1,20 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "7"
+  - "stable"
 cache:
   directories:
     - "node_modules"
+env:
+  global:
+    - CC_TEST_REPORTER_ID=1b9264a41d900cddd261d935d5ecd4a23ab8708c58d25fd6d480985920134554
+before_script:
+  - yarn global add nyc
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - nyc npm test && nyc report --reporter=text-lcov | coveralls
+  - npm run coveralls
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - npm run coverage

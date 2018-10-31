@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`landing page test should render the landing page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <LandingPage>
+        <div
+          className="container"
+        >
+          <Connect(Header)>
+            <Header
+              dispatch={[Function]}
+              isAuthenticated={false}
+            >
+              <header
+                className="header"
+              >
+                <a
+                  className="brand"
+                  href="/"
+                >
+                  Ride My Way
+                </a>
+                <nav>
+                  <ul
+                    className="menu"
+                  >
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/login"
+                      >
+                        <a
+                          href="/login"
+                          onClick={[Function]}
+                        >
+                          Login
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/signup"
+                      >
+                        <a
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          Sign-Up
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+            </Header>
+          </Connect(Header)>
+          <Hero>
+            <div
+              className="hero"
+            >
+              <h1>
+                Let's Ride together
+              </h1>
+              <p>
+                Ride-My-Way is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers.
+              </p>
+            </div>
+          </Hero>
+          <InfoSection>
+            <div
+              className="infoSection"
+            >
+              <h2>
+                HOW IT WORKS
+              </h2>
+              <div
+                className="row"
+              >
+                <InfoCard
+                  img="test-file-stub"
+                  key="1"
+                  text="Offer/Find a ride"
+                >
+                  <div>
+                    <div>
+                      <img
+                        alt="Offer/Find a ride"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <h4>
+                      Offer/Find a ride
+                    </h4>
+                  </div>
+                </InfoCard>
+                <InfoCard
+                  img="test-file-stub"
+                  key="2"
+                  text="Confirm Ride"
+                >
+                  <div>
+                    <div>
+                      <img
+                        alt="Confirm Ride"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <h4>
+                      Confirm Ride
+                    </h4>
+                  </div>
+                </InfoCard>
+                <InfoCard
+                  img="test-file-stub"
+                  key="3"
+                  text="Enjoy!"
+                >
+                  <div>
+                    <div>
+                      <img
+                        alt="Enjoy!"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <h4>
+                      Enjoy!
+                    </h4>
+                  </div>
+                </InfoCard>
+              </div>
+            </div>
+          </InfoSection>
+          <Footer>
+            <footer>
+              <p>
+                Ride My Way | Copyright © 2018
+              </p>
+            </footer>
+          </Footer>
+        </div>
+      </LandingPage>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

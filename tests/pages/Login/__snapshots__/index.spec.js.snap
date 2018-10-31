@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login page test should render the login page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Login>
+        <div
+          className="container"
+        >
+          <Connect(Header)>
+            <Header
+              dispatch={[Function]}
+              isAuthenticated={false}
+            >
+              <header
+                className="header"
+              >
+                <a
+                  className="brand"
+                  href="/"
+                >
+                  Ride My Way
+                </a>
+                <nav>
+                  <ul
+                    className="menu"
+                  >
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/login"
+                      >
+                        <a
+                          href="/login"
+                          onClick={[Function]}
+                        >
+                          Login
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        replace={false}
+                        to="/signup"
+                      >
+                        <a
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          Sign-Up
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+            </Header>
+          </Connect(Header)>
+          <withRouter(Connect(LoginForm))>
+            <Route>
+              <Connect(LoginForm)
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <LoginForm
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "createHref": [Function],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  loginUser={[Function]}
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <div
+                    className="loginForm"
+                  >
+                    <div
+                      className="container"
+                    >
+                      <h1>
+                        LOGIN
+                      </h1>
+                      <form
+                        onSubmit={[Function]}
+                      >
+                        <div
+                          className="form_control"
+                        >
+                          <label
+                            htmlFor="email"
+                          >
+                            Email
+                          </label>
+                          <input
+                            autoComplete="email"
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="email"
+                            required={true}
+                            type="email"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          className="form_control"
+                        >
+                          <label
+                            htmlFor="password"
+                          >
+                            Password
+                          </label>
+                          <input
+                            autoComplete="new-password"
+                            id="password"
+                            minLength={6}
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="password"
+                            required={true}
+                            type="password"
+                            value=""
+                          />
+                        </div>
+                        <button>
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </LoginForm>
+              </Connect(LoginForm)>
+            </Route>
+          </withRouter(Connect(LoginForm))>
+          <Footer>
+            <footer>
+              <p>
+                Ride My Way | Copyright © 2018
+              </p>
+            </footer>
+          </Footer>
+        </div>
+      </Login>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
