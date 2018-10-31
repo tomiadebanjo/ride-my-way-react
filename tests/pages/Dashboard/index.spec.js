@@ -41,7 +41,7 @@ describe('dashboard test', () => {
 			</Provider>
 		);
 	});
-
+ 
 	it('should render the dashboard page correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
