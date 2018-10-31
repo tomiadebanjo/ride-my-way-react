@@ -59,12 +59,11 @@ class Profile extends React.Component {
 						</div>
 					</div>
 				</div>
-
 				<div className={classes.button_row}>
 					<div className={classes.button}>
 						<a onClick={this.showModal}>Create a ride</a>
 					</div>
-					<div className={classes.button}>
+				<div className={classes.button}>
 						<a href="/rides">View available rides</a>
 					</div>
 					<div className={classes.button}>
