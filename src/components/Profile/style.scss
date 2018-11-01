@@ -11,22 +11,32 @@
     border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
 
+    .profile_row {
+      display: flex;
+      width: 60%;
+    }
+
     img {
       border-radius: 50%;
-      height: 150px;
+      height: 120px;
     }
     .img_row {
-      width: 20%;
+      width: 30%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .user_info {
-      width: 40%;
+      width: 70%;
       align-self: center;
       font-size: 20px;
       border-left: 0.2px solid #d3d3d3;
       padding: 0 20px;
+
+      p {
+        margin: 10px 0;
+        word-break: break-word;
+      }
     }
     .ride_count {
       display: flex;
@@ -116,10 +126,91 @@
     td {
       text-align: center;
       padding: 16px;
-      font-weight: 600;
+      font-weight: 500;
     }
     tr:nth-child(even) {
       background-color: #b8dde0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 5% 5%;
+  }
+}
+
+@media (max-width: 830px) {
+  .container{
+    .row {
+      height: auto;
+      flex-direction: column;
+
+      .profile_row {
+        width: 100%;
+      }
+      .img_row {
+        padding: 10px 0;
+        width: 30%
+      }
+
+      .user_info {
+        width: 70%;
+      }
+
+      .ride_count {
+        border-top: 1px solid #d3d3d3;
+        width: 100%;
+
+        .count_row {
+          border-left: none;
+          border-right: none;
+          padding: 15px 0;
+        }
+
+        .count_row_left {
+          border-left: 1px solid #d3d3d3;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    .button_row {
+      display: inline-grid;
+      grid-template-columns: auto;
+      width: 100%;
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+    .row {
+      .user_info {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .container {
+    .row {
+      .img_row {
+        width: 100%;
+      }
+      .profile_row {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+      .user_info {
+        border-left: none;
+        border-top: 1px solid #d3d3d3;
+        width: 85%;
+        padding: 0px;
+      }
     }
   }
 }

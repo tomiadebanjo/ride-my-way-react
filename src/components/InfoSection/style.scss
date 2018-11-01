@@ -10,3 +10,11 @@
     justify-content: space-around;
   }
 }
+
+@media (max-width: 470px) {
+  .infoSection {
+    .row {
+      flex-direction: column;
+    }
+  }
+}

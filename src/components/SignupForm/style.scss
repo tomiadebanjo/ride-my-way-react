@@ -14,7 +14,7 @@
   }
   .container {
     background-color: white;
-    min-width: 35%;
+    min-width: 30%;
     padding: 2%;
   }
 
@@ -51,3 +51,28 @@
     }
   }
 };
+
+@media (max-width: 820px){
+  .signupForm {
+    .container {
+      min-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .signupForm {
+    .container {
+      min-width: 60%;
+    }
+  }
+}
+
+
+@media (max-width: 475px){
+  .signupForm {
+    .container {
+      min-width: 70%;
+    }
+  }
+}
