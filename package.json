@@ -10,7 +10,7 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "dev-server": "webpack-dev-server --no-cache --open",
-    "postinstall": "rm -rf dist && webpack --mode production",
+    "postinstall": "rm -rf dist && webpack --config webpack.config.prod.js",
     "test": "jest --env=jsdom --verbose",
     "test:watch": "jest --watchAll --verbose"
   },
@@ -50,6 +50,7 @@
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
     "nyc": "^13.1.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
@@ -66,6 +67,7 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   }
 }
