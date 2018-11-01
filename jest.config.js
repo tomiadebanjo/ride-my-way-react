@@ -6,7 +6,8 @@ module.exports = {
     '!**/node_modules/**',
     '!**/src/server/**',
     '!**/src/index.js',
-    '!**/src/App.js'
+    '!**/src/App.js',
+    '!**/store/index.js'
   ],
   testMatch: ['<rootDir>/tests/**/?(*.)(spec|test).js?(x)'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
