@@ -29,7 +29,6 @@ export const login = (email, password, history) => (dispatch) => {
   })
   .then(response => {
     const { data } = response;
-    console.log(data)
     dispatch(loginSuccess(data))
     storeData(data);
     setAxiosHeader(data.token);
@@ -37,9 +36,8 @@ export const login = (email, password, history) => (dispatch) => {
     toastr.success(data.message);
   })
   .catch(error => {
-    dispatch(loginFail(error));
+    dispatch(loginFail(error.response.data));
     if(error.response){
-      console.log(error.response.data.message)
       return toastr.error(error.response.data.message);
     }
     toastr.error('Something went wrong please try again');
