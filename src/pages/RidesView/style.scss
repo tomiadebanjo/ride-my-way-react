@@ -39,3 +39,27 @@
     }
   }
 }
+
+@media (max-width: 1024px){
+  .ride_container {
+    .main_container {
+      grid-template-columns: auto auto auto
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .ride_container {
+    .main_container {
+      grid-template-columns: auto auto
+    }
+  }
+}
+
+@media (max-width: 475px){
+  .ride_container {
+    .main_container {
+      grid-template-columns: auto
+    }
+  }
+}

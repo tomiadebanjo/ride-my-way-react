@@ -25,7 +25,9 @@ const Header = props => (
 						<Link to="/dashboard">Dashboard</Link>
 					</li>
 					<li>
-						<Link to="/" onClick={userLogout}>Logout</Link>
+						<Link to="/" onClick={userLogout}>
+							Logout
+						</Link>
 					</li>
 				</ul>
 			)}

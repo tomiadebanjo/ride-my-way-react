@@ -39,3 +39,21 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+@media (max-width: 1024px){
+  .modal_main {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px){
+  .modal_main {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px){
+  .modal_main {
+    width: 75%;
+  }
+}

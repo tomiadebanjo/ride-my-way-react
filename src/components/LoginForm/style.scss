@@ -14,7 +14,7 @@
   }
   .container {
     background-color: white;
-    min-width: 35%;
+    min-width: 30%;
     padding: 2%;
   }
 
@@ -52,3 +52,28 @@
 
   }
 };
+
+@media (max-width: 820px){
+  .loginForm {
+    .container {
+      min-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .loginForm {
+    .container {
+      min-width: 60%;
+    }
+  }
+}
+
+
+@media (max-width: 475px){
+  .loginForm {
+    .container {
+      min-width: 70%;
+    }
+  }
+}

@@ -15,15 +15,55 @@
   }
 
   .brand {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   nav ul{
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
     li {
-      padding: 0 20px;
+      padding: 15px 20px;
+      height: 100%;
     }
+    li:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+    .header {
+      justify-content: none;
+      flex-direction: column;
+
+      .brand {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav {
+        width: 100%
+      }
+      nav ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+        li {
+          padding: 0 20px;
+          border-top: 1px solid #d3d3d3;
+          border-left: 1px solid #d3d3d3;
+          padding: 10px;
+          text-align: center;
+          flex: 1;
+        }
+      }
   }
 }

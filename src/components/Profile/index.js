@@ -31,29 +31,31 @@ class Profile extends React.Component {
 		const data = getData('user')
 		const { fullName, email } = data
 		const location = 'Lagos, Nigeria';
-		return (
-			<div className={classes.container}>
-				<CreateRideModal
-					show={this.state.modal.show}
-					handleClose={this.hideModal}
-				/>
+		return <div className={classes.container}>
+				<CreateRideModal show={this.state.modal.show} handleClose={this.hideModal} />
 				<div className={classes.row}>
-					<div className={classes.img_row}>
-						<img src={placeholder} alt="placeholder" />
-					</div>
-					<div className={classes.user_info}>
-						<p>Name: {fullName}</p>
-						<p>Email: {email}</p>
-						<p>Location: {location}</p>
+					<div className={classes.profile_row}>
+						<div className={classes.img_row}>
+							<img src={placeholder} alt="placeholder" />
+						</div>
+						<div className={classes.user_info}>
+							<p>Name: {fullName}</p>
+							<p>Email: {email}</p>
+							<p>Location: {location}</p>
+						</div>
 					</div>
 					<div className={classes.ride_count}>
 						<div className={classes.count_row}>
 							<p className={classes.margin_O}>Rides taken</p>
-							<span className={`${classes.count}  ${classes.margin_O}`}>0</span>
+							<span className={`${classes.count}  ${classes.margin_O}`}>
+								0
+							</span>
 						</div>
-						<div className={classes.count_row}>
+						<div className={`${classes.count_row}  ${classes.count_row_left}`}>
 							<p className={classes.margin_O}>Rides given</p>
-							<span className={`${classes.count}  ${classes.margin_O}`}>0</span>
+							<span className={`${classes.count}  ${classes.margin_O}`}>
+								0
+							</span>
 						</div>
 					</div>
 				</div>
@@ -61,7 +63,7 @@ class Profile extends React.Component {
 					<div className={classes.button}>
 						<a onClick={this.showModal}>Create a ride</a>
 					</div>
-				<div className={classes.button}>
+					<div className={classes.button}>
 						<a href="/rides">View available rides</a>
 					</div>
 					<div className={classes.button}>
@@ -84,8 +86,7 @@ class Profile extends React.Component {
 						</table>
 					</div>
 				</div>
-			</div>
-		);
+			</div>;
 	}
 }
 

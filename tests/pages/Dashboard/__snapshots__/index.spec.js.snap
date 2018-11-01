@@ -215,28 +215,32 @@ exports[`dashboard test should render the dashboard page correctly 1`] = `
                 className="row"
               >
                 <div
-                  className="img_row"
+                  className="profile_row"
                 >
-                  <img
-                    alt="placeholder"
-                    src="test-file-stub"
-                  />
-                </div>
-                <div
-                  className="user_info"
-                >
-                  <p>
-                    Name: 
-                    Tom
-                  </p>
-                  <p>
-                    Email: 
-                    email
-                  </p>
-                  <p>
-                    Location: 
-                    Lagos, Nigeria
-                  </p>
+                  <div
+                    className="img_row"
+                  >
+                    <img
+                      alt="placeholder"
+                      src="test-file-stub"
+                    />
+                  </div>
+                  <div
+                    className="user_info"
+                  >
+                    <p>
+                      Name: 
+                      Tom
+                    </p>
+                    <p>
+                      Email: 
+                      email
+                    </p>
+                    <p>
+                      Location: 
+                      Lagos, Nigeria
+                    </p>
+                  </div>
                 </div>
                 <div
                   className="ride_count"
@@ -256,7 +260,7 @@ exports[`dashboard test should render the dashboard page correctly 1`] = `
                     </span>
                   </div>
                   <div
-                    className="count_row"
+                    className="count_row  count_row_left"
                   >
                     <p
                       className="margin_O"
